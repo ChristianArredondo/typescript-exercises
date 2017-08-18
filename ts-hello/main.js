@@ -1,7 +1,9 @@
+"use strict";
 // // EXERCISE 1 - HELLO WORLD (to compile using tsc CLI)
 // function log(message) {
 //   console.log(message);
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
 // var message = 'Hello World';
 // log(message);
 // // EXERCISE 2 - DECLARING VARIABLES
@@ -41,19 +43,13 @@
 // let drawPoint = (point: Point) => {
 //   // ..
 // }
-// EXERCISE 7 - CLASSES
-var Point = (function () {
-    function Point() {
-    }
-    Point.prototype.draw = function () {
-        console.log('X: ' + this.x + ', Y: ' + this.y);
-    };
-    Point.prototype.getDistance = function (another) {
-        console.log('lol');
-    };
-    return Point;
-}());
-var point = new Point();
-point.x = 1;
-point.y = 2;
-point.draw();
+// // EXERCISE 7, 8 - CLASSES and CONSTRUCTORS
+// import { Point } from './point';
+// let point = new Point(1, 2);
+// let x = point.x;
+// point.x = 10;
+// point.draw();
+var like_component_1 = require("./like.component");
+var likeButton = new like_component_1.LikeButton(21, false);
+likeButton.onClick();
+console.log("likesCount: " + likeButton.likesCount + ", isSelected: " + likeButton.isSelected);

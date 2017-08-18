@@ -58,21 +58,16 @@
 //   // ..
 // }
 
-// EXERCISE 7 - CLASSES
-class Point {
-  x: number;
-  y: number;
-  draw () {
-    console.log('X: ' + this.x + ', Y: ' + this.y)
-  }
+// // EXERCISE 7, 8 - CLASSES and CONSTRUCTORS
+// import { Point } from './point';
 
-  getDistance (another: Point) {
-    console.log('lol')
-  }
+// let point = new Point(1, 2);
+// let x = point.x;
+// point.x = 10;
+// point.draw();
 
-}
+import { LikeButton } from './like.component';
 
-let point = new Point();
-point.x = 1;
-point.y = 2;
-point.draw();
+let likeButton = new LikeButton(21, false);
+likeButton.onClick();
+console.log(`likesCount: ${ likeButton.likesCount }, isSelected: ${ likeButton.isSelected}`);
